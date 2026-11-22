@@ -120,7 +120,7 @@ cc -Wall -Wextra -Werror main.c libft.a -I. -o program
 
 An AI assistant (Claude) was used during this project. Its role was:
 
-- **Explanations:** explaining C concepts (pointers, `const`, `size_t`, buffer limits) and the rules in the subject, so the author could write each function.
-- **Review:** the AI assistant was used to help troubleshoot, find inconsistencies, and help debug by going through the sequence of events in the code.
-- **Edge Cases:** the AI assistant was also used to help find edge cases and pick up any issues that the author may have missed.
+- Explanations: explaining C concepts (pointers, `const`, `size_t`, buffer limits) and the rules in the subject, so the author could write each function.
+- Review: the AI assistant was used to help troubleshoot, find inconsistencies, and help debug by going through the sequence of events in the code.
+- Edge Cases: the AI assistant was also used to help find edge cases and pick up any issues that the author may have missed.
 
