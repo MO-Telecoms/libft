@@ -93,7 +93,7 @@ cc -Wall -Wextra -Werror main.c libft.a -I. -o program
 
 - `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd`: write a character, string, string with newline, or integer to a file descriptor using `write`.
 
-### Linked lists (bonus)
+### Linked lists
 
 `t_list` has two members: `content`, a `void *` to the data, and `next`, a pointer to the following node (`NULL` for the last one).
 
