@@ -1,7 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 23:04:57 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 23:04:58 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
@@ -55,13 +68,3 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 					void (*del)(void *));
 
 #endif
-
-mv ft_lstadd_back_bonus.c ft_lstadd_back.c
-mv ft_lstadd_front_bonus.c ft_lstadd_front.c
-mv ft_lstclear_bonus.c ft_lstclear.c
-mv ft_lstdelone_bonus.c ft_lstdelone.c
-mv ft_lstiter_bonus.c ft_lstiter.c
-mv ft_lstlast_bonus.c ft_lstlast.c
-mv ft_lstmap_bonus.c ft_lstmap.c
-mv ft_lstnew_bonus.c ft_lstnew.c
-mv ft_lstsize_bonus.c ft_lstsize.c
