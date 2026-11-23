@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:16:01 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:34:49 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
-	size_t count;
-	size_t i;
+	size_t	count;
+	size_t	i;
 
 	count = 0;
 	i = 0;
@@ -27,22 +39,32 @@ static void	free_all(char **arr, size_t n)
 	free(arr);
 }
 
-char	**ft_split(char const *s, char c)
+static char	*word_dup(char const *s, size_t len)
 {
-	char **arr;
-	size_t words;
-	size_t w;
-	size_t i;
-	size_t start;
-	size_t len;
-	size_t k;
+	char	*word;
+	size_t	k;
 
-	words = count_words(s, c);
-	arr = malloc(sizeof(char *) * (words + 1));
-	if (arr == NULL)
+	word = malloc(len + 1);
+	if (word == NULL)
 		return (NULL);
-	i = 0;
+	k = 0;
+	while (k < len)
+	{
+		word[k] = s[k];
+		k++;
+	}
+	word[len] = '\0';
+	return (word);
+}
+
+static int	fill_words(char **arr, char const *s, char c, size_t words)
+{
+	size_t	w;
+	size_t	i;
+	size_t	start;
+
 	w = 0;
+	i = 0;
 	while (w < words)
 	{
 		while (s[i] == c)
@@ -50,22 +72,28 @@ char	**ft_split(char const *s, char c)
 		start = i;
 		while (s[i] != '\0' && s[i] != c)
 			i++;
-		len = i - start;
-		arr[w] = malloc(len + 1);
+		arr[w] = word_dup(s + start, i - start);
 		if (arr[w] == NULL)
 		{
 			free_all(arr, w);
-			return (NULL);
+			return (0);
 		}
-		k = 0;
-		while (k < len)
-		{
-			arr[w][k] = s[start + k];
-			k++;
-		}
-		arr[w][len] = '\0';
 		w++;
 	}
 	arr[w] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+	size_t	words;
+
+	words = count_words(s, c);
+	arr = malloc(sizeof(char *) * (words + 1));
+	if (arr == NULL)
+		return (NULL);
+	if (!fill_words(arr, s, c, words))
+		return (NULL);
 	return (arr);
 }

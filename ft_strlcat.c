@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:16:13 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:47:02 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t dlen;
-	size_t slen;
-	size_t i;
+	size_t	dlen;
+	size_t	slen;
+	size_t	i;
 
 	dlen = 0;
 	while (dlen < dstsize && dst[dlen] != '\0')

@@ -30,7 +30,7 @@ bonus: $(NAME) $(BONUS_OBJS)
 # Compile one .c file into its .o file.
 # $< is the .c file, $@ is the .o file being built.
 # The headers are listed so changing them rebuilds the objects that use them.
-%.o: %.c libft.h libft_bonus.h
+%.o: %.c libft.h libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Delete the object files, mandatory and bonus.

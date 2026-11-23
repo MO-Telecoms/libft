@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:15:56 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:39:01 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include "libft.h"
 
 static void	put_unsigned(unsigned int nb, int fd)
 {
-	char c;
+	char	c;
 
 	if (nb >= 10)
 		put_unsigned(nb / 10, fd);
@@ -13,7 +25,7 @@ static void	put_unsigned(unsigned int nb, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
+	unsigned int	nb;
 
 	if (n < 0)
 	{

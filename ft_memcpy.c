@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:15:43 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:31:35 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
-	size_t i;
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
 
 	d = dst;
 	s = src;

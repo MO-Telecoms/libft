@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:15:30 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:50:31 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
-#include "libft_bonus.h"
+#include "libft.h"
 
 static void	free_list(t_list *lst, void (*del)(void *))
 {
-	t_list *next;
+	t_list	*next;
 
 	while (lst != NULL)
 	{
@@ -16,10 +28,10 @@ static void	free_list(t_list *lst, void (*del)(void *))
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *head;
-	t_list *tail;
-	t_list *node;
-	void *content;
+	t_list	*head;
+	t_list	*tail;
+	t_list	*node;
+	void	*content;
 
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);

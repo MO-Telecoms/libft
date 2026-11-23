@@ -35,7 +35,7 @@ Every `.c` file is compiled with `-Wall -Wextra -Werror`.
 Include the headers and link against the archive:
 
 ```c
-#include "libft.h"          /* or "libft_bonus.h" for the list functions */
+#include "libft.h"          /* or "libft.h" for the list functions */
 
 int main(void)
 {
@@ -53,7 +53,7 @@ cc -Wall -Wextra -Werror main.c libft.a -I. -o program
 ### Headers
 
 - `libft.h` declares the mandatory functions and the `t_list` structure.
-- `libft_bonus.h` declares the linked-list functions. It includes `libft.h`.
+- `libft.h` declares the linked-list functions. It includes `libft.h`.
 
 ### Character functions
 

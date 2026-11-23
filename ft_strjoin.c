@@ -1,12 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohodeh <mohodeh@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/11/23 22:16:11 by mohodeh           #+#    #+#             */
+/*   Updated: 2026/11/23 22:48:28 by mohodeh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *p;
-	size_t len1;
-	size_t len2;
-	size_t i;
+	char	*p;
+	size_t	len1;
+	size_t	len2;
+	size_t	i;
 
 	len1 = 0;
 	while (s1[len1] != '\0')
